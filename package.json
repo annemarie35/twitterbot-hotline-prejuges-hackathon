@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "express": "~4.9.x",
-    "twitter": "1.2.3"
+    "twitter": "1.2.3",
+    "http": "0.0.0"
   },
   "engines": {
     "node": "0.10.x"
