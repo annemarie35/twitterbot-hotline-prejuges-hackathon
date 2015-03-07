@@ -28,8 +28,8 @@ client.stream('statuses/filter', {track: '@hotlineprejuges'}, function(stream) {
 
   stream.on('data', function(tweet) {
     //console.log(tweet);
-    console.log(tweet.user.screen_name);
-    console.log(tweet.text);
+    //console.log(tweet.user.screen_name);
+    //console.log(tweet.text);
     //console.log('http://www.23h04.com/prejuges/api/?q=' + tweet.text);
 
     http.get('http://www.23h04.com/prejuges/api/?q=' + tweet.text,
