@@ -10,7 +10,7 @@ app.get('/', function(request, response) {
 });
 
 app.listen(app.get('port'), function() {
-  //console.log("Node app is running at localhost:" + app.get('port'));
+  console.log("Node app is running at localhost:" + app.get('port'));
 
 var http = require('http');
 var Twitter = require('twitter');
@@ -28,8 +28,8 @@ client.stream('statuses/filter', {track: '@hotlineprejuges'}, function(stream) {
 
   stream.on('data', function(tweet) {
     //console.log(tweet);
-    //console.log(tweet.text);
-    //console.log(tweet.user.screen_name);
+    console.log(tweet.user.screen_name);
+    console.log(tweet.text);
     //console.log('http://www.23h04.com/prejuges/api/?q=' + tweet.text);
 
     http.get('http://www.23h04.com/prejuges/api/?q=' + tweet.text,
@@ -48,7 +48,7 @@ client.stream('statuses/filter', {track: '@hotlineprejuges'}, function(stream) {
             var obj = JSON.parse(response);
             if(obj.error_num=='200') {
               var message = '@'+tweet.user.screen_name + ' "' + obj.title + '" : ' + obj.link;
-              //console.log(message);
+              console.log(message);
               client.post('statuses/update', {status: message},  function(error, params, response){
                 //console.log(error);
               });
