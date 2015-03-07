@@ -50,13 +50,13 @@ client.stream('statuses/filter', {track: '@hotlineprejuges'}, function(stream) {
               var message = '@'+tweet.user.screen_name + ' "' + obj.title + '" : ' + obj.link;
               console.log(message);
               client.post('statuses/update', {status: message},  function(error, params, response){
-                //console.log(error);
+                console.log(error);
               });
             } else {
               var message = '@'+tweet.user.screen_name + ' en finir sur les idées fausses sur les pauvres et la pauvreté : http://www.editionsquartmonde.org/En-finir-avec-les-idees-fausses';
-               //console.log(message);
+              console.log(message);
               client.post('statuses/update', {status: message},  function(error, params, response){
-                //console.log(error);
+                console.log(error);
               });
             }
 
