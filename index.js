@@ -16,12 +16,11 @@ var http = require('http');
 var Twitter = require('twitter');
 
 var client = new Twitter({
-  consumer_key: 'fphdwBfFLstFZtInCjGaAMqFM',
-  consumer_secret: 'hymxYrvOshjdhX8rFKgsTKqzAXYuX9FA95fxEOaHFpFmq9KRAI',
-  access_token_key: '3077077109-et3Qg9FQjnjyAQ75XA9CWkYsYFtmI745Z01I7AC',
-  access_token_secret: 'nvKhX35W6dmYJtCXi2xU19up2XuLM5joN4ZGOblIqrpAd',
+  consumer_key: process.env.TWITTER_CONSUMER_KEY,
+  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+  access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 });
-
 
 client.stream('statuses/filter', {track: '@hotlineprejuges'}, function(stream) {
   // console.log ('Hello3');
