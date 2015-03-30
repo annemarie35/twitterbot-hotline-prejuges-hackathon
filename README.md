@@ -1,3 +1,12 @@
+# To be continued
+
+deploy an a new heroku account (hacklamisere.test on gmail) --> il a été crée (voir compte gmail) / mdp & login idem que pour l'accès à gmail
+source : https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app
+
+
+--> les token sont disponibles dans le fichier .env ou  en se connectant sur https://apps.twitter.com/ via le compte twitter @hotlineprejuges
+--> ils ont été configurés pour être directement utilisable sur heroku
+
 # node-js-getting-started
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
